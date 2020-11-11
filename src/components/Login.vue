@@ -1,6 +1,7 @@
 <template>
   <Page actionBarHidden="true">
     <StackLayout verticalAlignment="center">
+
       <Image src="~/assets/images/logo.png" width="150" class="m-b-30"></Image>
       <Label class="h1 text-center"  text="Bienvenido" />
       <StackLayout class="nt-input">
@@ -16,9 +17,11 @@
         <Label v-if="$v.contrasena.$error && !$v.contrasena.minLength" text="Mínimo 8 caracteres" class="text-danger" />
       </StackLayout>
       
-      <Button v-if="!disabledButton" class="-primary" text="Iniciar Sesión" @tap="iniciarSesion" />
+      <Button v-if="!disabledButton" class="-primary" @tap="iniciarSesion" >
+        Iniciar Sesión
+      </Button>
 
-      <Button v-if="disabledButton" class="-primary" text="Procesando" />
+      <Button v-if="disabledButton" class="-primary" >Procesando</Button>
     </StackLayout> 
 </Page>
 </template>
